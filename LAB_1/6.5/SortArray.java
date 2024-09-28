@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class SortArray {
     public static void main(String[] args) {
+        //input
         Scanner lst = new Scanner(System.in);
 
         System.out.println("Nhap day: ");
@@ -19,7 +20,7 @@ public class SortArray {
             numbers.add(number);
             count += 1;
         }
-
+        //ham sort
         for (int i=0; i<count-1; i++) {
             for (int j=i+1; j<count; j++) {
                 if (numbers.get(i) > numbers.get(j)) {
