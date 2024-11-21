@@ -1,0 +1,7 @@
+{
+    "java.project.explorer.showNonJavaResources": true,
+    "java.project.sourcePaths": [
+        "AimsProject"
+    ],
+    "java.project.referencedLibraries": []
+}
