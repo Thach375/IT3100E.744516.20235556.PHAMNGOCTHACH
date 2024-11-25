@@ -1,6 +1,6 @@
-package hust.soict.dsai.aims.cart;
+package AimsProject.hust.soict.dsai.aims.cart;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import AimsProject.hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
@@ -12,7 +12,7 @@ public class Cart {
 		if (qtyOrdered < MAX_NUMBERS_ORDERED) {
 			itemOrdered[qtyOrdered] = disc;
 			qtyOrdered++;
-			System.out.print("Disc has been add");
+			System.out.println("Disc has been add");
 		}
 	}
 	
@@ -55,5 +55,34 @@ public class Cart {
 		addDigitalVideoDisc(dvd2);
 	}
 
+	public float TotalCost() {
+		float sum = 0;
+		for (int i = 0; i < qtyOrdered; i++) {
+			sum += itemOrdered[i].getCost();
+		}
+		return sum;
+	}
+
+	public void printCart() {
+		System.out.println("***********************CART***********************");
+		System.out.println("Ordered Items:");
+		for (int i=0; i<qtyOrdered; i++) {
+			System.out.println((i+1) + ". " + itemOrdered[i].toString());
+		}
+		System.out.println("Total cost " + TotalCost());
+		System.out.println("***************************************************");
+	}
 	
+	public void searchByTitle(String title) {
+		boolean found = false;
+			for (int i=0; i < qtyOrdered; i++) {
+				if (itemOrdered[i].isMatch(title)) {
+					System.out.println("Found " + itemOrdered[i].toString());
+					found = true;
+				}
+			if (!found) {
+				System.out.println("No DVD found with title " + title);
+			}
+		}
+	}
 }

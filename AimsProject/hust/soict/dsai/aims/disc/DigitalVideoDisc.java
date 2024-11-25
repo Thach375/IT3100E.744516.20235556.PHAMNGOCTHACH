@@ -1,4 +1,4 @@
-package hust.soict.dsai.aims.disc;
+package AimsProject.hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
 	private String title;
@@ -9,9 +9,15 @@ public class DigitalVideoDisc {
 
 	public DigitalVideoDisc[] discArray;
 
+	private static int nbDigitalVideoDisc = 0;
+
+	private int id;
+
     public DigitalVideoDisc() {
+		nbDigitalVideoDisc++;
+		this.id = nbDigitalVideoDisc;
     }
-	
+
 	public String getTitle() {
 		return title;
 	}
@@ -26,6 +32,12 @@ public class DigitalVideoDisc {
 	}
 	public float getCost() {
 		return cost;
+	}
+	public int getID() {
+		return id;
+	}
+	public static int getnbDigitalVideoDisc() {
+		return nbDigitalVideoDisc;
 	}
 	
 	public DigitalVideoDisc(String title) {
@@ -57,5 +69,13 @@ public class DigitalVideoDisc {
 	public void setTitle(String title){
 		this.title = title;
 	}
+
+	public String toString() {
+        return "DVD " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$";
+    }
+
+	public boolean isMatch(String title) {
+        return this.title.equalsIgnoreCase(title);
+    }
 
 }
