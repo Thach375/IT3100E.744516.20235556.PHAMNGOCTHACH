@@ -1,2 +1,32 @@
-Question: Is Java a Pass by Value or a Pass by Reference programming language? 
-Answer: Java is a Pass by Value 
+3. Passing Parameter
+Question
+a, Is Java a Pass by Value or a Pass by Reference programming language? 
+b, After the call of swap(jungleDVD, cinderellaDVD) why does the title of these 
+two objects still remain? 
+c, After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the 
+title of the JungleDVD changed? 
+
+Answer:
+a, Java is a Pass by Value 
+
+b, In Java, arguments are always passed by value, meaning the method gets a 
+copy of the reference to the object, not the actual reference itself
+- When you call swap(jungleDVD, cinderellaDVD), the references to jungleDVD and 
+cinderellaDVD are copied and passed into the method as the parameters o1 and o2.
+- Inside the method, the swap logic swaps the values of o1 and o2. However, this 
+change is only local to the method and does not affect the original references 
+(jungleDVD and cinderellaDVD) in the main method.
+Since the method only works with the copies of the references, the original 
+references in main remain unchanged, and the objects they point to are not swapped.
+
+c,  This happens because the method directly modifies the content of the object 
+that the reference points to, rather than reassigning the reference itself.
+- When jungleDVD is passed to changeTitle, the method gets a copy of the reference 
+pointing to the same object as jungleDVD. Both the method parameter (dvd) and 
+the original variable (jungleDVD) refer to the same object in memory.
+- Inside the method:
+The call to dvd.setTitle(title) updates the title field of the object that both 
+dvd and jungleDVD point to. This modification is reflected in the original object.
+When the line dvd = new DigitalVideoDisc(oldTitle) is executed, it creates a 
+new DigitalVideoDisc object. However, this change only affects the local reference 
+dvd and does not alter the original jungleDVD reference in the main method.
