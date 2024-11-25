@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\Thach\IT3100E.744516.20241.20235556.PhamNgocThach\.metadata\.plugins\org.eclipse.jdt.core
+2315386619.index
+751496720.index
+1865797976.index
