@@ -36,4 +36,8 @@ public class Store {
             System.out.println("Not found " + disc.getTitle() + "in store");
         }
     }
+
+    public void DisplayItem() {
+        System.out.println(itemsOnStore.toString());
+    }
 }
