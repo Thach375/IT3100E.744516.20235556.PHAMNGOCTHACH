@@ -1,0 +1,18 @@
+12.
+Question: Alternatively, to compare items in the cart, instead of using Comparator, we can use the Comparable interface and override the compareTo()method. You can refer to the Java docs to see the information of this interface. 
+Answer: Using the Comparable Interface for Comparing Items
+
+- To compare items in a cart, the Comparable interface provides a streamlined approach by defining a natural ordering for objects. Instead of using the Comparator interface, which requires an external comparison logic, the Comparable interface integrates the comparison directly within the class. This is achieved by overriding the compareTo() method.
+
+Key Details:
+    Method to Implement:
+        int compareTo(T o):
+            Returns:
+                A negative integer if the current object is less than the given object.
+                Zero if the two objects are equal.
+                A positive integer if the current object is greater than the given object.
+    Usage:
+        The compareTo() method specifies the natural ordering for the class (e.g., by price, name, or other attributes).
+        It allows seamless integration with Java's sorting mechanisms like Collections.sort().
+
+- Using the Comparable interface is ideal for scenarios with a single, natural ordering. For more complex requirements (e.g., multiple sorting criteria), the Comparator interface might be preferred.
