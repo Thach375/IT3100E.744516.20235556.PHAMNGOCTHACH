@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "OtherProjects",
+        "GUIProject",
+        "AimsProject"
+    ],
+    "java.project.referencedLibraries": []
+}
