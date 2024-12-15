@@ -81,4 +81,3 @@ public class CompactDisc extends Disc implements Playable {
         return "ID: " + getId() +", Title: " + getTitle() + ", Category: " + getCategory() + ", Cost: " + getCost() + ", Artist: " + artist + ", Length: " + getLength();
     }
 }
-
